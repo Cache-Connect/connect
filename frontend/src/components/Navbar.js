@@ -10,13 +10,14 @@ const Navbar=()=>{
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">Logo</label>
+        <label class="logo">Connect</label>
         <ul>
-            <li><a className="active" href="#">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Feedback</a></li>
+            <li><a className="active" href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/interview">Interview Experience</a></li>
+            <li><a href="/halloffame">Hall Of Fame</a></li>
+            <li><a href="/feedback">Feedback</a></li>
         </ul>
     </nav>
     

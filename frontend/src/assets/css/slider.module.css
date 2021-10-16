@@ -1,0 +1,19 @@
+.sliderEven img{
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 380px;
+    max-height: 98px;
+    align-content: center;
+}
+
+.sliderOdd img{
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 380px;
+    max-height: 98px;
+    align-content: center;
+}
+
+.sliderOdd{
+    margin-left: 13%;
+}

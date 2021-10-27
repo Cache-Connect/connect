@@ -7,30 +7,30 @@ import styles from '../assets/css/slider.module.css';
 
 function Slider() {
     return (
-        <div>
-            <div className={`${styles.sliderEven} my-4`}>
-                <img className="col-3" src={accenture} alt="Accenture"></img>
-                <img className="col-3" src={deloitte} alt="Deloitte"></img>
-                <img className="col-3" src={cognizant} alt="Cognizant"></img>
-                <img className="col-3" src={capegemini} alt="Capegemini"></img>
+            <div className="container-fluid"> 
+            <div className={`${styles.sliderEven} row`}>
+                <img className="col-sm-3 col-md-3" src={accenture} alt="Accenture"></img>
+                <img className="col-sm-3 col-md-3" src={deloitte} alt="Deloitte"></img>
+                <img className="col-sm-3 col-md-3" src={cognizant} alt="Cognizant"></img>
+                <img className="col-sm-3 col-md-3" src={capegemini} alt="Capegemini"></img>
             </div>
-            <div className={`${styles.sliderOdd}`}>
-                <img className="col-4" src={accenture} alt="Accenture"></img>
-                <img className="col-4" src={deloitte} alt="Deloitte"></img>
-                <img className="col-4" src={cognizant} alt="Cognizant"></img>
+            <div className={`${styles.sliderOdd} row`}>
+                <img className="col-sm-4 col-md-4" style={{left:"8.5%"}} src={accenture} alt="Accenture"></img>
+                <img className="col-sm-4 col-md-4" src={deloitte} alt="Deloitte"></img>
+                <img className="col-sm-4 col-md-4" style={{right:"8%"}} src={cognizant} alt="Cognizant"></img>
             </div>
-            <div className={`${styles.sliderEven} my-4`}>
-                <img className="col-3" src={accenture} alt="Accenture"></img>
-                <img className="col-3" src={deloitte} alt="Deloitte"></img>
-                <img className="col-3" src={cognizant} alt="Cognizant"></img>
-                <img className="col-3" src={capegemini} alt="Capegemini"></img>
+            <div className={`${styles.sliderEven} row`}>
+                <img className="col-sm-3 col-md-3" src={accenture} alt="Accenture"></img>
+                <img className="col-sm-3 col-md-3" src={deloitte} alt="Deloitte"></img>
+                <img className="col-sm-3 col-md-3" src={cognizant} alt="Cognizant"></img>
+                <img className="col-sm-3 col-md-3" src={capegemini} alt="Capegemini"></img>
             </div>
-            <div className={`${styles.sliderOdd}`}>
-                <img className="col-4" src={accenture} alt="Accenture"></img>
-                <img className="col-4" src={deloitte} alt="Deloitte"></img>
-                <img className="col-4" src={cognizant} alt="Cognizant"></img>
+            <div className={`${styles.sliderOdd} row`}>
+                <img className="col-sm-4 col-md-4" style={{left:"8.5%"}} src={accenture} alt="Accenture"></img>
+                <img className="col-sm-4 col-md-4" src={deloitte} alt="Deloitte"></img>
+                <img className="col-sm-4 col-md-4" style={{right:"8%"}} src={cognizant} alt="Cognizant"></img>
             </div>
-        </div>
+            </div>
     )
 }
 

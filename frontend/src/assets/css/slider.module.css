@@ -1,19 +1,16 @@
 .sliderEven img{
-    padding-left: 5%;
-    padding-right: 5%;
-    max-width: 380px;
-    max-height: 98px;
-    align-content: center;
+    padding: 0% 6%;
 }
 
 .sliderOdd img{
-    padding-left: 5%;
-    padding-right: 5%;
-    max-width: 380px;
-    max-height: 98px;
-    align-content: center;
+    padding: 2% 10%;
 }
 
 .sliderOdd{
-    margin-left: 13%;
+    /* margin-left: 13%; */
+    /* margin: 0px 2vw; */
+}
+.sliderEvem{
+    /* margin-left: 13%; */
+    /* margin: 0px 2vw; */
 }

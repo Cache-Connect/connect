@@ -1,14 +1,22 @@
 const mongoose=require('mongoose');
 
-const Schema=new mongoose.Schema;
+// const Schema=new mongoose.Schema();
 
-const companies=new Schema({
+const companySchema=new mongoose.Schema({
+    companyId:{
+        type:Number,
+        required:true
+    },
     companyName:{
         type:String,
         required:true
     },
     linkToApply:{
         type:String,
+    },
+    logoLink:{
+        type:String,
+        required:true
     },
     dateOfArrival:{
         type:Date,
@@ -28,4 +36,4 @@ const companies=new Schema({
     }
 })
 
-module.exports = mongoose.model("Companies", companySchema);
+module.exports = mongoose.model("Company", companySchema);

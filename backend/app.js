@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const mongoose=require('mongoose');
 const dotenv=require('dotenv');
-const core=require('cors');
+const cors=require('cors');
+const companyForm = require("./Routes/companyForm");
 
 dotenv.config();
 
@@ -12,7 +13,7 @@ const port = process.env.PORT || 5000;
 
 const MONGO_URI = process.env.DATABASE_ACCESS;
 
-app.use(expres.json()); //body-parser
+app.use(express.json()); //body-parser
 app.use(cors());
 
 
@@ -31,3 +32,5 @@ mongoose.connect(MONGO_URI, {
   catch{
     console.log("Some problem in connecting server or database");
   }
+
+  app.use(companyForm);

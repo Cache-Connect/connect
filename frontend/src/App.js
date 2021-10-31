@@ -1,13 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Home from "./Pages/Home";
+import CompanyForm from "./Pages/CompanyForm";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/">
+        <Switch>
+        <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/companyform">
+          <CompanyForm />
         </Route>
         <Route path="/about">
           {/* <Home /> */}
@@ -24,6 +29,7 @@ function App() {
         <Route path="/feedback">
           {/* <Home /> */}
         </Route>
+        </Switch>
       </Router>
     </div>
   );

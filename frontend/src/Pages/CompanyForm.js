@@ -3,6 +3,9 @@ import style from '../assets/css/Home.module.css';
 import Navbar from '../components/Navbar';
 import axios from 'axios';
 
+
+
+
 function CompanyForm() {
 
     const [companyId,setCompanyId]=useState(0);
@@ -79,48 +82,59 @@ function CompanyForm() {
     return (
         <div>
             <Navbar />
-            <h1 className={`${style.mainHeading} text-center py-5`}>Company Form that are coming for recruitment in IET DAVV</h1><hr />
-            <div onSubmit={handleSubmit}>
-                <label htmlFor="companyId">Company Id:</label>&nbsp;&nbsp;
-                <input type="number" id="companyId" name="companyId" onChange={(e) => setCompanyId(e.target.value)} />&nbsp;
+            <h2 className={`${style.mainHeading} text-center py-5`}>Company Form that are coming for recruitment in IET DAVV
+            </h2>
+            <div className={`${style.form} ` }  onSubmit={handleSubmit}>
+              <div className={`${style.label}`}> <label  htmlFor="companyId">Company Id:</label>&nbsp;&nbsp;
+                <input className={`${style.input}`} type="number" id="companyId" name="companyId" onChange={(e) => setCompanyId(e.target.value)} />&nbsp;
                 {idError && <b style={{color:'red'}}>*</b>}
                 <br />
+              </div>
 
-                <label htmlFor="companyName">Company Name:</label>&nbsp;&nbsp;
-                <input type="text" id="companyName" name="companyName" onChange={(e) => setCompanyName(e.target.value)} />&nbsp;
+              <div  className={`${style.label}`} >
+                <label  htmlFor="companyName">Company Name:</label>&nbsp;&nbsp;
+                <input  className={`${style.input}`}   type="text" id="companyName" name="companyName" onChange={(e) => setCompanyName(e.target.value)} />&nbsp;
                 {nameError && <b style={{color:'red'}}>*</b>}
                 <br />
+                </div>
 
-                <label htmlFor="linkToApply">Form Link:</label>&nbsp;&nbsp;
-                <input type="text" id="linkToApply" name="linkToApply" onChange={(e) => setLinkToApply(e.target.value)} /><br />
-
-                <label htmlFor="logoLink">Company Logo Link: </label>&nbsp;&nbsp;
-                <input type="text" id="logoLink" name="logoLink" onChange={(e) => setLogoLink(e.target.value)} />&nbsp;
+              <div className={`${style.label}`}>
+                <label   htmlFor="linkToApply">Form Link:</label>&nbsp;&nbsp;
+                <input   className={`${style.input}`}  type="text" id="linkToApply" name="linkToApply" onChange={(e) => setLinkToApply(e.target.value)} /><br />
+</div>
+<div className={`${style.label} margin-top py-3`}>
+                <label   htmlFor="logoLink">Company Logo Link: </label>&nbsp;&nbsp;
+                <input  className={`${style.input}`}  type="url" id="logoLink" name="logoLink" onChange={(e) => setLogoLink(e.target.value)} />&nbsp;
                 {logoError && <b style={{color:'red'}}>*</b>}
                 <br />
-
-                <label htmlFor="date">Date when company is arriving to campus: </label>&nbsp;&nbsp;
-                <input type="date" id="date" name="date" onChange={(e) => setDateOfArrival(e.target.value)} />&nbsp;
+            </div>
+            <div className={`${style.label}`}>
+                <label    htmlFor="date">Date when company is arriving to campus: </label>&nbsp;&nbsp;
+                <input  className={`${style.input}`}  type="date" id="date" name="date" onChange={(e) => setDateOfArrival(e.target.value)} />&nbsp;
                 {dateError && <b style={{color:'red'}}>*</b>}
                 <br />
-
+</div>
+<div className={`${style.label}`}>
                 <label htmlFor="ctc">CTC Offered (per annum):</label>&nbsp;&nbsp;
-                <input type="text" id="ctc" name="ctc" onChange={(e) => setCtcOffered(e.target.value)} />&nbsp;
+                <input  className={`${style.input}`}  type="text" id="ctc" name="ctc" onChange={(e) => setCtcOffered(e.target.value)} />&nbsp;
                 {ctcError && <b style={{color:'red'}}>*</b>}
                 <br />
-
-                <label> Recruitment Type: </label>&nbsp;&nbsp;
+</div>
+<div className={`${style.label}`}>
+                <label  > Recruitment Type: </label>&nbsp;&nbsp;
                 <input type="radio" id="on" value="on" name="ctc" checked onChange={(e) => setRecruitmentType(e.target.value)} />&nbsp;On Campus&nbsp;&nbsp;
                 <input type="radio" id="off" value="off" name="ctc" onChange={(e) => setRecruitmentType(e.target.value)} />&nbsp;Off Campus<br />
-                
-                <label htmlFor="bond">Bond (in years): </label>&nbsp;&nbsp;
-                <input type="number" id="bond" value={bond} onChange={(e) => setBond(e.target.value)}/><br />
+</div>
+<div className={`${style.label} margin-top py-3`}>             
+                <label     htmlFor="bond">Bond (in years): </label>&nbsp;&nbsp;
+                <input  className={`${style.input}`} type="number" id="bond" value={bond} onChange={(e) => setBond(e.target.value)}/><br />
                 {hasError!=="" && <p style={{color:'red'}}>{hasError}</p>}
                 {/* <select value={recruitmentType} onChange={(e)=>setRecruitmentType(e.target.value)}>
                     <option value="off">Off Campus</option>
                     <option value="on">On Campus</option>
                 </select> */}
-                <button type="button" onClick={handleSubmit}>Submit</button>
+</div>  
+                <button  className={`${style.submitButton}`} type="button" onClick={handleSubmit}>Submit</button>
             </div>
         </div>
     )

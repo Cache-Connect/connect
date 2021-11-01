@@ -16,8 +16,7 @@ const MONGO_URI = process.env.DATABASE_ACCESS;
 app.use(express.json()); //body-parser
 app.use(cors());
 
-console.log(process.env.DATABASE_ACCESS)
-  mongoose.connect('mongodb+srv://kt:connect@cluster0.yveip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' ,{
+  mongoose.connect(MONGO_URI ,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

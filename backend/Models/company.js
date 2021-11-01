@@ -5,7 +5,8 @@ const mongoose=require('mongoose');
 const company=new mongoose.Schema({
     companyId:{
         type:Number,
-        required:true
+        required:true,
+        unique:true
     },
     companyName:{
         type:String,

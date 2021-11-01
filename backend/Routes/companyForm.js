@@ -2,6 +2,6 @@ const route = require("express").Router();
 
 const controller = require("../Controllers/companyForm");
 
-route.post("/companyform", controller.postForm);
+route.post("/companyForm", controller.postForm);
 
 module.exports = route;

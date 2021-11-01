@@ -18,7 +18,7 @@ const company=new mongoose.Schema({
         type:String,
         required:true
     },
-    dateOfArrival:{
+    arrivalDate:{
         type:Date,
         required:true
     },
@@ -26,13 +26,13 @@ const company=new mongoose.Schema({
         type:String,
         required:true
     },
-    type:{
+    recruitmentType:{
         type:String,
         required:true
     },
     bond:{
-        type:String,
-        default:"0 years"
+        type:Number,
+        default:0
     }
 })
 

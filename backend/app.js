@@ -16,21 +16,14 @@ const MONGO_URI = process.env.DATABASE_ACCESS;
 app.use(express.json()); //body-parser
 app.use(cors());
 
-
-try{
-mongoose.connect(MONGO_URI, {
+console.log(process.env.DATABASE_ACCESS)
+  mongoose.connect('mongodb+srv://kt:connect@cluster0.yveip.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' ,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-  },()=>{
-    console.log("Database connected");
   })
-
-    app.listen(port,()=>console.log(`server is connected to port ${port}`));
-  }
-  catch{
-    console.log("Some problem in connecting server or database");
-  }
-
+  .then(()=>console.log("db connected"))
+  .catch((err)=>console.log(err))
+  
+  app.listen(port,()=>console.log(`server is connected to port ${port}`));
   app.use(companyForm);
+

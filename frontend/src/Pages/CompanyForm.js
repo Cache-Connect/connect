@@ -72,7 +72,7 @@ function CompanyForm() {
             recruitmentType,
             bond,
         }).then((response)=>{
-            console.log(response);
+            console.log(response.data);
         })
     }
 
@@ -95,7 +95,7 @@ function CompanyForm() {
                 <input type="text" id="linkToApply" name="linkToApply" onChange={(e) => setLinkToApply(e.target.value)} /><br />
 
                 <label htmlFor="logoLink">Company Logo Link: </label>&nbsp;&nbsp;
-                <input type="url" id="logoLink" name="logoLink" onChange={(e) => setLogoLink(e.target.value)} />&nbsp;
+                <input type="text" id="logoLink" name="logoLink" onChange={(e) => setLogoLink(e.target.value)} />&nbsp;
                 {logoError && <b style={{color:'red'}}>*</b>}
                 <br />
 

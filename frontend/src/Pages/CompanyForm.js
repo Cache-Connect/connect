@@ -114,7 +114,7 @@ function CompanyForm() {
                 <input type="radio" id="off" value="off" name="ctc" onChange={(e) => setRecruitmentType(e.target.value)} />&nbsp;Off Campus<br />
                 
                 <label htmlFor="bond">Bond (in years): </label>&nbsp;&nbsp;
-                <input type="number" id="bond" value="0" onChange={(e) => setBond(e.target.value)}/><br />
+                <input type="number" id="bond" value={bond} onChange={(e) => setBond(e.target.value)}/><br />
                 {hasError!=="" && <p style={{color:'red'}}>{hasError}</p>}
                 {/* <select value={recruitmentType} onChange={(e)=>setRecruitmentType(e.target.value)}>
                     <option value="off">Off Campus</option>

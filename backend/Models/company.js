@@ -2,7 +2,7 @@ const mongoose=require('mongoose');
 
 // const Schema=new mongoose.Schema();
 
-const companySchema=new mongoose.Schema({
+const company=new mongoose.Schema({
     companyId:{
         type:Number,
         required:true
@@ -36,4 +36,4 @@ const companySchema=new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model("Company", companySchema);
+module.exports = mongoose.model("company", company);

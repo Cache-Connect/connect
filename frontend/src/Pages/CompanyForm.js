@@ -102,8 +102,55 @@ function CompanyForm() {
         alert(`Company with Id ${companyId} successfully added`);
     }
 
-    const handleUpdate = ()=>{
+    const handleUpdate = async()=>{
 
+        setIdError(false);
+        setNameError(false);
+        setDateError(false);
+        setLogoError(false);
+        setCtcError(false);
+        setHasError("");
+        if(companyId===0 || companyName==="" || arrivalDate==="" || logoLink==="" || ctcOffered==="")
+        {
+            if(companyId===0)
+            {
+                setIdError(true);
+            }
+            if(companyName==="")
+            {
+                setNameError(true);
+            }
+            if(arrivalDate==="")
+            {
+                setDateError(true);
+            }
+            if(logoLink==="")
+            {
+                setLogoError(true);
+            }
+            if(ctcOffered==="")
+            {
+                setCtcError(true);
+            }
+            setHasError("Fields that are marked with * are mandatory");
+            return;
+        }
+
+        await axios.put(BASE_URL+"/updateCompany",{
+            companyId,
+            companyName,
+            linkToApply,
+            logoLink,
+            arrivalDate,
+            ctcOffered,
+            recruitmentType,
+            bond,
+        }).then((response)=>{
+            console.log(response.data);
+            alert(response.data.message)
+        }).catch((err)=>{
+            console.log(err.message);
+        })
     }
 
     return (

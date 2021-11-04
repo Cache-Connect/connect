@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css"
+import { NavLink } from 'react-router-dom';
 
 const Navbar=()=>{
     return(
@@ -7,18 +8,17 @@ const Navbar=()=>{
 
     <nav>
         <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
+        <label for="check" className="checkbtn">
+            <i className="fas fa-bars"></i>
         </label>
-        <label class="logo">Connect</label>
+        <label className="logo"><a href="/">Connect</a></label>
         <ul>
-            <li><a className="active" href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
+            <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
             
-            <li><a href="/interview">Interview Experience</a></li>
-            <li><a href="/halloffame">Hall Of Fame</a></li>
-            <li><a href="/feedback">Feedback</a></li>
-            <li><a href="/login">SignIn</a></li>
+            <li><NavLink activeClassName="active" to="/interview">Interview Experience</NavLink></li>
+            <li><NavLink activeClassName="active" to="/halloffame">Hall Of Fame</NavLink></li>
+            <li><NavLink activeClassName="active" to="/feedback">Feedback</NavLink></li>
+            <li><NavLink activeClassName="active" to="/login">SignIn</NavLink></li>
         </ul>
     </nav>
     

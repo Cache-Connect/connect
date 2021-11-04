@@ -75,9 +75,10 @@ function CompanyForm() {
                 setHasError("Company with this Id already exists. Do you want to update?")
                 return;
             }
-            console.log('here');
             return;
         })
+
+        if(hasError!=="") return;
 
         await axios.post(BASE_URL+"/companyform",{
             companyId,

@@ -37,14 +37,17 @@ const Register = () => {
         if (user.password.length < 5) return;
         if (fullName && email && password) {
             if ((password !== reEnterPassword)) {
-                setPasswordError("Password didn't match");
+                setPasswordError("Password doesn't match");
                 return;
             }
             else setPasswordError("");
             axios.post("http://localhost:5000/register", user)
                 .then(res => {
-                    alert(res.data.message)
-                    history.push("/login")
+                    if(!res.data.error) {
+                        alert(res.data.message)
+                        history.push("/login")
+                    }
+                    else setPasswordError(res.data.message)
                 })
         } else {
             setPasswordError("All fields are mandatory")
@@ -56,7 +59,7 @@ const Register = () => {
         <div>
             <Navbar />
             <div className={style.register}>
-                {console.log("User", user)}
+                {/* {console.log("User", user)} */}
                 <h1 style={{ fontWeight: "600" }}>Register</h1><hr />
                 <input type="text" name="fullName" value={user.fullName} placeholder="Your Full Name" onChange={handleChange}></input>
                 <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={handleChange}></input>

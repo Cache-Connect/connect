@@ -16,6 +16,7 @@ const Login = () => {
     const [err,setErr]=useState("");
 
     const handleChange = e => {
+        setErr("");
         const { name, value } = e.target
         setUser({
             ...user,
@@ -30,7 +31,7 @@ const Login = () => {
                 if(msg!=="Login Successfull") setErr(msg);
                 else{
                     setErr("");
-                    alert("Login Successfull");
+                    alert("Login Successfull")
                     history.push("/")
                 }
                     // setLoginUser(res.data.user)

@@ -4,7 +4,8 @@ import axios from "axios"
 import { useHistory } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-const Login = ({ setLoginUser }) => {
+// const Login = ({ setLoginUser }) => {
+const Login = () => {
 
     const history = useHistory()
 
@@ -12,6 +13,7 @@ const Login = ({ setLoginUser }) => {
         email: "",
         password: ""
     })
+    const [err,setErr]=useState("");
 
     const handleChange = e => {
         const { name, value } = e.target
@@ -24,9 +26,14 @@ const Login = ({ setLoginUser }) => {
     const login = () => {
         axios.post("http://localhost:5000/login", user)
             .then(res => {
-                alert(res.data.message)
-                setLoginUser(res.data.user)
-                history.push("/")
+                let msg=res.data.message;
+                if(msg!=="Login Successfull") setErr(msg);
+                else{
+                    setErr("");
+                    alert("Login Successfull");
+                    history.push("/")
+                }
+                    // setLoginUser(res.data.user)
             })
     }
 
@@ -37,6 +44,7 @@ const Login = ({ setLoginUser }) => {
                 <h1 style={{fontWeight:"600"}}>Login</h1> <hr/>
                 <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your Email"></input>
                 <input type="password" name="password" value={user.password} onChange={handleChange} placeholder="Enter your Password" ></input>
+                {err!=="" && <p style={{color:"red"}}>{err}</p>}
                 <div className={style.button} onClick={login}>Login</div>
                 <div>or</div>
                 <div className={style.button} onClick={() => history.push("/register")}>Register</div>

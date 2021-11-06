@@ -31,7 +31,8 @@ function CompanyForm() {
     const [hasError,setHasError]=useState("");
     const BASE_URL="http://localhost:5000"
 
-    const handleSubmit=async ()=>{
+    const handleSubmit=async (e)=>{
+        e.preventDefault();
         setIdError(false);
         setNameError(false);
         setDateError(false);

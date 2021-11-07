@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import style from '../assets/css/Home.module.css';
+import style from '../assets/css/Form.module.css';
 import Navbar from '../components/Navbar';
 import axios from 'axios';
 

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Navbar.css"
+import style from '../assets/css/Nav.module.css'
 
+import logo from "../assets/img/nav/logo.png";
 const Navbar=()=>{
     return(
         <div>
@@ -10,7 +12,10 @@ const Navbar=()=>{
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">Connect</label>
+       
+        <img className={`${style.logo}`} src={logo} alt="logo"></img>
+   
+        {/* <label class="logo">Connect</label> */}
         <ul>
             <li><a className="active" href="/">Home</a></li>
             <li><a href="/about">About</a></li>

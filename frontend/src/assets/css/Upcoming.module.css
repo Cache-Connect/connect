@@ -1,0 +1,64 @@
+
+.mainbox{
+    position: relative;
+   
+   
+}
+.outerbox{
+    
+    margin-left: 7%;
+    margin-right: 9%;
+}
+.card{
+   
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+/* margin: 0 auto; */
+max-width: 500px;
+border-style: 0;
+border-width: 0;
+padding: 5% 5%;
+
+}
+.card_head{
+    padding: 1%;
+    background-color: rgb(210, 213, 230);
+    border-radius: 5px;
+    position: relative;
+    left: 8%;
+    text-align: center;
+    align-items: center;
+    width: 308px;
+    height:348px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.img{
+   width: 304px;
+    height:170px;
+    padding:5%;
+    background-color: rgb(210, 213, 230);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+.text{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: rgb(210, 213, 230);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.body{
+   
+    margin-bottom: 6%;
+    text-align: center;
+    background-color: rgb(210, 213, 230);
+}
+
+.buttonText:link, .buttonText:visited {
+    /* background-color: #f44336; */
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }

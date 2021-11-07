@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Card,Button } from 'react-bootstrap';
+import style from '../assets/css/Upcoming.module.css';
 import axios from 'axios';
 
 function UpcomingCompanies() {
@@ -31,17 +33,41 @@ function UpcomingCompanies() {
             .catch((err) => console.log(err))
     }, [])
 
-    return (
-        <div className="container-fluid">
+    return ( <div  className={`${style.outerbox}`}>
+        <div className="container-fluid ">
             <div className={`row`}>
                 {
                     upcomingCompanies.map((company) => {
+
                         return (
-                            <h1 className="col-sm-3 col-md-3">{company.companyName}</h1>
+                            <div className={`${style.card} col-sm-3 col-md-4`}> 
+                           <div className={`${style.card_head}`}>
+                                <Card   style={{ width: '17rem'}}>
+                                {/* borderStyle:"none" */}
+                                <div className={`${style.img}`} >
+                                    <Card.Img variant="top" src={company.logoLink} />
+                                </div>
+                                {/* <hr/> */}
+                                <div className={`${style.text}`}>
+                                <Card.Body className={`${style.body}` }>
+                                    <Card.Title>{company.companyName}</Card.Title>
+                                    <Card.Text>
+                                <h5> {company.recruitmentType}-Campus</h5>
+                                    </Card.Text>
+                                    <Button variant="primary" >
+                                    <a  className={`${style.buttonText}`} href={company.linkToApply} target="blank"> Apply Now</a>
+                                    </Button>
+                                </Card.Body>
+                                </div>
+                                </Card>
+</div>
+                            {/* <h1 className="col-sm-3 col-md-3">{company.companyName}</h1> */}
+                            </div>
                         )
                     })
                 }
             </div>
+        </div>
         </div>
     )
 }

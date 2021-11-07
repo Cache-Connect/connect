@@ -42,7 +42,7 @@ function UpcomingCompanies() {
                         return (
                             <div className={`${style.card} col-sm-3 col-md-4`}> 
                            <div className={`${style.card_head}`}>
-                                <Card   style={{ width: '17rem'}}>
+                                <Card >
                                 {/* borderStyle:"none" */}
                                 <div className={`${style.img}`} >
                                     <Card.Img variant="top" src={company.logoLink} />

@@ -31,7 +31,8 @@ function CompanyForm() {
     const [hasError,setHasError]=useState("");
     const BASE_URL="http://localhost:5000"
 
-    const handleSubmit=async ()=>{
+    const handleSubmit=async (e)=>{
+        e.preventDefault();
         setIdError(false);
         setNameError(false);
         setDateError(false);
@@ -75,9 +76,10 @@ function CompanyForm() {
                 setHasError("Company with this Id already exists. Do you want to update?")
                 return;
             }
-            console.log('here');
             return;
         })
+
+        if(hasError!=="") return;
 
         await axios.post(BASE_URL+"/companyform",{
             companyId,

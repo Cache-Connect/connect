@@ -4,6 +4,8 @@ const mongoose=require('mongoose');
 const dotenv=require('dotenv');
 const cors=require('cors');
 const companyForm = require("./Routes/companyForm");
+const register = require("./Routes/register");
+const login = require("./Routes/login");
 
 dotenv.config();
 
@@ -24,5 +26,8 @@ app.use(cors());
   .catch((err)=>console.log(err))
   
   app.listen(port,()=>console.log(`server is connected to port ${port}`));
+  
   app.use(companyForm);
+  app.use(register);
+  app.use(login);
 

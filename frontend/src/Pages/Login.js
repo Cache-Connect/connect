@@ -28,10 +28,10 @@ const Login = () => {
         axios.post("http://localhost:5000/login", user)
             .then(res => {
                 let msg=res.data.message;
-                if(msg!=="Login Successfull") setErr(msg);
+                if(msg!=="Login Successful") setErr(msg);
                 else{
                     setErr("");
-                    alert("Login Successfull")
+                    alert("Login Successful")
                     history.push("/")
                 }
                     // setLoginUser(res.data.user)

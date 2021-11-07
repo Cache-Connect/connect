@@ -5,6 +5,7 @@ import CompanyForm from "./Pages/CompanyForm";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import "./App.css"
+import HallOfFame from "./Pages/HallOfFame";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           {/* <Home /> */}
         </Route>
         <Route path="/halloffame">
-          {/* <Home /> */}
+          <HallOfFame />
         </Route>
         <Route path="/feedback">
           {/* <Home /> */}

@@ -6,6 +6,7 @@ const cors=require('cors');
 const companyForm = require("./Routes/companyForm");
 const register = require("./Routes/register");
 const login = require("./Routes/login");
+const placedStudent=require("./Routes/placedStudent");
 
 dotenv.config();
 
@@ -30,4 +31,5 @@ app.use(cors());
   app.use(companyForm);
   app.use(register);
   app.use(login);
+  app.use(placedStudent);
 

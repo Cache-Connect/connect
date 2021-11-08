@@ -62,7 +62,7 @@ const Register = () => {
                 {/* {console.log("User", user)} */}
                 <h1 style={{ fontWeight: "600" }}>Register</h1><hr />
                 <input type="text" name="fullName" value={user.fullName} placeholder="Your Full Name" onChange={handleChange}></input>
-                <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={handleChange}></input>
+                <input type="email" name="email" value={user.email} placeholder="Your Email" onChange={handleChange}></input>
                 <input type="password" name="password" value={user.password} placeholder="Your Password" onChange={handleChange}></input>
                 <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={handleChange}></input>
                 {passwordError !== "" && <p style={{ color: "red" }}>{passwordError}</p>}

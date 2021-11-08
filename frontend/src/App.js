@@ -6,6 +6,8 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import "./App.css"
 import HallOfFame from "./Pages/HallOfFame";
+import HallOfFameForm from "./Pages/HallofFameForm";
+import Error from "./Pages/Error";
 
 function App() {
   return (
@@ -33,9 +35,13 @@ function App() {
         <Route path="/halloffame">
           <HallOfFame />
         </Route>
+        <Route path="/halloffame-form">
+          <HallOfFameForm />
+        </Route>
         <Route path="/feedback">
           {/* <Home /> */}
         </Route>
+        <Route component={Error} />
         </Switch>
       </Router>
     </div>

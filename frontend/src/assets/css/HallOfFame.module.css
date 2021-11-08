@@ -1,3 +1,7 @@
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lato');
 :root {
     --cardw: 15em;
     --cardm: 1em;
@@ -12,19 +16,23 @@
  
   
 .card {
+  font-family:  'Lato', sans-serif;
+  color: #ffffff;
     text-align: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     margin: 15px;
     border: 2px solid #fff;
     flex-basis: var(--cardw);
-    padding: 30px;
+    padding: 15px;
     border-radius:calc(var(--cardm) * 0.5);
 /*     background: url();
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center top;
     background-color: #fff;*/
-  
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(49deg, #171a4dee 20%, #060e4e 50%);
+    /* padding:10px; */
     display: flex;
     flex-direction: column;
 }
@@ -68,4 +76,34 @@
     box-shadow: none;
     display: inline-block;
   }
+}
+
+.sname{
+font-size:30;
+ font-weight: 1000;
+ padding: 1%;
+}
+.profile{
+  font-size: 8;
+  padding: 1%;
+}
+.branch{
+  font-size: 10;
+  font-weight: 600;
+  padding: 1%;
+}
+.type{font-weight: 500;
+  padding: 1%;
+}
+
+.pack{font-weight: 500;
+  padding: 1%;
+  padding: 1%;
+}
+
+.batch{font-weight: 500;
+}
+.img{
+  width: 25px;
+height:25px;
 }

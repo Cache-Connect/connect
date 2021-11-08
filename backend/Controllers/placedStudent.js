@@ -34,7 +34,7 @@ module.exports.postForm = async (req, res, next) => {
         })
 };
 
-module.exports.getAllCompanies = async (req, res) => {
+module.exports.getAllplacedStudents = async (req, res) => {
     try {
         let result = await placedStudent.find();
         res.status(200).json(result)

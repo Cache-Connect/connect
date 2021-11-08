@@ -17,6 +17,8 @@
   
 .card {
   font-family:  'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
   color: #ffffff;
     text-align: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);

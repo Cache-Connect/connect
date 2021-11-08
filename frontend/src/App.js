@@ -20,9 +20,6 @@ function App() {
         <Route path="/companyform">
           <CompanyForm />
         </Route>
-        <Route path="/about">
-          {/* <Home /> */}
-        </Route>
         <Route path="/login">
           <Login />
         </Route>

@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Card,Button } from 'react-bootstrap';
 import style from '../assets/css/Upcoming.module.css';
 import axios from 'axios';
+import jwt from 'jsonwebtoken';
+import { useHistory } from 'react-router';
+
 
 function UpcomingCompanies() {
 
     const BASE_URL = "http://localhost:5000";
+    const history=useHistory();
 
     const [upcomingCompanies, setUpcomingCompanies] = useState([]);
 
@@ -33,6 +37,24 @@ function UpcomingCompanies() {
             .catch((err) => console.log(err))
     }, [])
 
+    const handleApplyNow=(e)=>{
+        console.log(e.target.link)
+        const token = localStorage.getItem('token');
+        if (token) {
+            const user = jwt.decode(token);
+            if (!user) {
+                localStorage.removeItem('token');
+                history.replace('/login');
+            }
+            else{
+                history.push(e.target.link);
+            }
+        }
+        else {
+            history.replace("/login")
+        }
+    }
+
     return ( <div  className={`${style.outerbox}`}>
         <div className="container-fluid ">
             <div className={`row`}>
@@ -55,7 +77,7 @@ function UpcomingCompanies() {
                                 <h5> {company.recruitmentType}-Campus</h5>
                                     </Card.Text>
                                     <Button variant="primary" >
-                                    <a  className={`${style.buttonText}`} href={company.linkToApply} target="blank"> Apply Now</a>
+                                    <div  className={`${style.buttonText}`} link={company.linkToApply} onClick={handleApplyNow} target="blank"> Apply Now</div>
                                     </Button>
                                 </Card.Body>
                                 </div>

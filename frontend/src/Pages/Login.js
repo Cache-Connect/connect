@@ -14,6 +14,7 @@ const Login = () => {
         password: ""
     })
     const [err,setErr]=useState("");
+    // const [showLogout,setShowLogout]=useState(false);
 
     const handleChange = e => {
         setErr("");
@@ -28,11 +29,17 @@ const Login = () => {
         axios.post("http://localhost:5000/login", user)
             .then(res => {
                 let msg=res.data.message;
-                if(msg!=="Login Successful") setErr(msg);
+                if(!res.data.user) setErr(msg);
                 else{
                     setErr("");
+                    console.log(res.data.user.token);
+                    localStorage.setItem('token',res.data.user.token)
+                    console.log(res.data.token);
+                    // setShowLogout(true);
+
                     alert("Login Successful")
-                    history.push("/")
+
+                    history.push("/");
                 }
                     // setLoginUser(res.data.user)
             })
@@ -40,7 +47,7 @@ const Login = () => {
 
     return (
         <div className>
-            <Navbar />
+            <Navbar/>
             <div className={`${style.login}`}>
                 <h1 style={{fontWeight:"600"}}>Login</h1> <hr/>
                 <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your Email"></input>

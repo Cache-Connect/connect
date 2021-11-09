@@ -9,6 +9,7 @@ import HallOfFame from "./Pages/HallOfFame";
 import HallOfFameForm from "./Pages/HallofFameForm";
 import Error from "./Pages/Error";
 import Feedback from "./Pages/Feedback";
+import InterviewExperience from "./Pages/InterviewExperience";
 
 function App() {
   return (
@@ -18,25 +19,26 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/companyform">
+        <Route exact path="/companyform">
           <CompanyForm />
         </Route>
-        <Route path="/login">
+        <Route exact path="/login">
           <Login />
         </Route>
-        <Route path="/register">
+        <Route exact path="/register">
           <Register />
         </Route>
-        <Route path="/interview">
+        <Route exact path="/interview-experience">
+          <InterviewExperience />
           {/* <Home /> */}
         </Route>
-        <Route path="/halloffame">
+        <Route exact path="/halloffame">
           <HallOfFame />
         </Route>
-        <Route path="/halloffame-form">
+        <Route exact path="/halloffame-form">
           <HallOfFameForm />
         </Route>
-        <Route path="/feedback">
+        <Route exact path="/feedback">
           <Feedback />
         </Route>
         <Route component={Error} />

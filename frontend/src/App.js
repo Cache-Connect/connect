@@ -8,6 +8,7 @@ import "./App.css"
 import HallOfFame from "./Pages/HallOfFame";
 import HallOfFameForm from "./Pages/HallofFameForm";
 import Error from "./Pages/Error";
+import Feedback from "./Pages/Feedback";
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
           <HallOfFameForm />
         </Route>
         <Route path="/feedback">
-          {/* <Home /> */}
+          <Feedback />
         </Route>
         <Route component={Error} />
         </Switch>

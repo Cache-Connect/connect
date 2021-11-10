@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import style from '../assets/css/Form.module.css';
 import Navbar from '../components/Navbar';
 import axios from 'axios';
+import jwt from 'jsonwebtoken';
+import { useHistory } from 'react-router';
 
 function HallOfFameForm() {
 
@@ -31,6 +33,27 @@ function HallOfFameForm() {
 
     const [hasError, setHasError] = useState("");
     const BASE_URL = "http://localhost:5000"
+
+    const history = useHistory();
+
+    useEffect(() => {
+
+
+        const token = localStorage.getItem('token');
+        if (token) {
+            const user = jwt.decode(token);
+            if (!user) {
+                localStorage.removeItem('token');
+                history.replace('/login');
+            }
+            else{
+
+            }
+        }
+        else {
+            history.replace("/login")
+        }
+    }, [])
 
     const handleSubmit = async (e) => {
         e.preventDefault();

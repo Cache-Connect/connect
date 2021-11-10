@@ -109,3 +109,18 @@ font-size:30;
   width: 25px;
 height:25px;
 }
+
+.reach{
+  border: rgb(76, 180, 180) solid 1px;
+  background-color:rgb(179, 226, 226) ;
+ margin: 2%;
+ padding: 0.7%;
+ border-radius: 8px;
+ 
+ text-align: center;
+}
+.reach a{
+  color:rgb(54, 3, 102);
+  text-decoration: none;
+  font-family: cursive;
+}

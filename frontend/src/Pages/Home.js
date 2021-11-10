@@ -11,6 +11,8 @@ function Home() {
                 <h1 className={`${style.mainHeading} text-center py-5`}>Our Alumni Placed At Leading Companies</h1>
             <Slider />
             <br/>
+            
+            
             <h1 className={`${style.mainHeading} text-center py-5`}>Upcoming Companies</h1>
             <UpcomingCompanies />
         </div>

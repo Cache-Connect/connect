@@ -25,7 +25,7 @@ function HallOfFame() {
                         return (
                             <div className={styles.card}>
                                 <div className={styles.sname}>{student.fullName}</div>
-                                <div className={styles.profile}>SDE @ {student.companyName}</div>
+                                <div className={styles.profile}>{student.companyName}</div>
                                 <div className={styles.branch}> {student.branch} </div>
                                 <div className={styles.type}> {student.recruitmentType}-Campus : Placement</div>
                                 <div className={styles.pack}>({student.ctc})</div>

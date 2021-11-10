@@ -67,13 +67,13 @@ const Feedback = () => {
                 </div>
 
                 <div className={`${style.label} margin-top py-3`}>
-                    <label htmlFor="subject">Subject </label>&nbsp;&nbsp;
+                    <label htmlFor="subject">Subject: </label>&nbsp;&nbsp;
                     <input className={`${style.input}`} value={subject} type="text" id="subject" name="subject" onChange={(e) => setSubject(e.target.value)} />&nbsp;
                   
                     <br />
                 </div>
                 <div className={`${style.label} `}>
-                    <label htmlFor="msg">Message </label>&nbsp;&nbsp;
+                    <label htmlFor="msg">Message: </label>&nbsp;&nbsp;
                     <textarea rows="4" cols="50" className={`${style.input}`} value={msg} type="text-area" id="msg" name="msg" onChange={(e) => setMsg(e.target.value)} />&nbsp;
                    
                     <br />

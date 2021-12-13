@@ -80,7 +80,7 @@ const Feedback = () => {
                 </div>
 
             
-                {hasError !== "" && <p style={{ color: 'red' }}>{hasError}</p>}
+                {hasError !== "" && <p style={{ color: 'red', padding:'4%' }}>{hasError}</p>}
                 {/* {showUpdate && <button  className={`${style.submitButton}`} type="button" onClick={handleUpdate}>Update</button>} */}
                 <button className={`${style.submitButton}`} type="button" onClick={handleSubmit}>Submit</button>
             </div>

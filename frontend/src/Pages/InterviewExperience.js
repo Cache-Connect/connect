@@ -28,9 +28,9 @@ function InterviewExperience() {
     }, [])
 
     return (
-        <div>
+        <>
             <Navbar />
-            <div>
+            <div className="out">
             <div className="site-wrapper">
                 <div className="article">
                     <header>
@@ -89,7 +89,7 @@ function InterviewExperience() {
             </div>
         </div>
         <Footer />
-        </div>
+        </>
     )
 }
 

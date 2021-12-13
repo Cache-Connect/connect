@@ -1,15 +1,25 @@
 :root {
-    --article-width: 80ch;
+    --article-width: 90ch;
+    
   }
 
   .site-wrapper {
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
   
+  .out{
+    flex-direction: column;
+    position: relative;
+    margin-top: 4%;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-bottom: 3%;
   
+  }
   .site-wrapper .article h1,
   .site-wrapper .article h2,
   .site-wrapper .article h3,
@@ -73,6 +83,7 @@
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     margin: 0px 1.2em;
+    
   }
   
   .sitewrapper img {

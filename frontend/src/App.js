@@ -10,6 +10,7 @@ import HallOfFameForm from "./Pages/HallofFameForm";
 import Error from "./Pages/Error";
 import Feedback from "./Pages/Feedback";
 import InterviewExperience from "./Pages/InterviewExperience";
+import AddInterviewExperience from "./Pages/AddInterviewExperience";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
         </Route>
         <Route exact path="/feedback">
           <Feedback />
+        </Route>
+        <Route exact path="/addInterviewExperience">
+          <AddInterviewExperience />
         </Route>
         <Route component={Error} />
         </Switch>

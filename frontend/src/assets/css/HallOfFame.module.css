@@ -14,11 +14,38 @@
     justify-content: center;
  }
  
+
+
+.row {margin: 0s -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.outer{
+  margin-left: 7%;
+}
+
+
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
   
 .card {
   font-family:  'Lato', sans-serif;
-  display: flex;
+ height: 270px;
   flex-direction: column;
+  float:left;
+  width: 21%;
   color: #ffffff;
     text-align: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -27,11 +54,7 @@
     flex-basis: var(--cardw);
     padding: 15px;
     border-radius:calc(var(--cardm) * 0.5);
-/*     background: url();
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-color: #fff;*/
+
     background-color: #E4E9FD;
     background-image: -webkit-linear-gradient(49deg, #171a4dee 20%, #060e4e 50%);
     /* padding:10px; */

@@ -20,7 +20,8 @@ function HallOfFame() {
         <>
         <Navbar />
         <div className={styles.reach}> <a href='/halloffame-form'> Reach out to us if you have secured any off/on-campus offer and your name is not updated here yet!  </a> </div>
-            <div className="col d-flex flex-cloumn justify-content-center">
+        <div className={styles.outer}>
+            <div className={styles.row}>
                 {
                     placedStudents.map((student) => {
                         return (
@@ -36,6 +37,7 @@ function HallOfFame() {
                         )
                     })
                 }
+            </div>
             </div>
         </>
     )

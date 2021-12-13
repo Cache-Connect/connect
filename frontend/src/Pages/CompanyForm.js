@@ -66,7 +66,7 @@ function CompanyForm() {
             return;
         }
         // alert(companyId+" "+companyName+" "+linkToApply+" "+arrivalDate+" "+ctcOffered+" "+recruitmentType+" "+bond);
-        await axios.get(BASE_URL+"/getAllCompanies").then((res)=>{
+        axios.get(BASE_URL+"/getAllCompanies").then((res)=>{
             console.log(res.data);
             const cId=parseInt(companyId);
             if(res.data.some(company=>company.companyId===cId))
@@ -81,7 +81,7 @@ function CompanyForm() {
 
         if(hasError!=="") return;
 
-        await axios.post(BASE_URL+"/companyform",{
+        axios.post(BASE_URL+"/companyform",{
             companyId,
             companyName,
             linkToApply,

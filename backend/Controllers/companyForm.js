@@ -22,7 +22,7 @@ module.exports.postForm = async (req, res, next) => {
         bond,
     });
     // console.log(save_form);
-    await save_form.save()
+    save_form.save()
         .then(data => {
             console.log('Saved')
             res.status(200).json(data);

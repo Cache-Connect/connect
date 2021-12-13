@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faFacebook , faInstagram, faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
 
 const Footer=()=>{
 return(
@@ -8,19 +10,23 @@ return(
 		{/* <!-- Social media icons line Start --> */}
 		<div className="sm-handle">
 			<a href="https://www.instagram.com/kartikbhavsar17/" target="_blank" className="sm-button">
-				<i className="fab fa-instagram"> </i>
+            <FontAwesomeIcon icon={faInstagram} />
+				{/* <i className="fab fa-instagram"> </i> */}
 			</a>
 
 			<a href="https://www.linkedin.com/in/kartikey-bhawsar-a0710318b/" target="_blank" className="sm-button">
-				<i className="fab fa-linkedin"> </i>
+            <FontAwesomeIcon icon={faLinkedin} />
+                {/* <i className="fab fa-linkedin"> </i> */}
 			</a>
 
 			<a href="https://www.facebook.com/kartik.bhavsar2" target="_blank" className="sm-button">
-				<i className="fab fa-facebook-f"> </i>
+            <FontAwesomeIcon icon={faFacebook} />
+				{/* <i className="fab fa-facebook-f"> </i> */}
 			</a>
 
 			<a href="https://github.com/kartikey-bhawsar" target="_blank" className="sm-button">
-				<i className="fab fa-github"> </i>
+            <FontAwesomeIcon icon={faGithub} />
+                {/* <i className="fab fa-github"> </i> */}
 			</a>
 		</div>
 

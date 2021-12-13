@@ -3,6 +3,7 @@ import style from '../assets/css/Register.module.css';
 import axios from "axios"
 import { useHistory } from "react-router-dom"
 import Navbar from "../components/Navbar";
+import Footer from '../components/Footer';
 
 const Register = () => {
 
@@ -70,6 +71,7 @@ const Register = () => {
                 <div>or</div>
                 <div className={style.button} onClick={() => history.push("/login")}>Login</div>
             </div>
+            <Footer />
         </div>
     )
 }

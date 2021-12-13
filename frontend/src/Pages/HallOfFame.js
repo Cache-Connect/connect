@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from "../assets/css/HallOfFame.module.css";
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import ln from "../assets/img/slider/ln.png";
 import axios from 'axios';
 
@@ -39,6 +40,7 @@ function HallOfFame() {
                 }
             </div>
             </div>
+            <Footer />
         </>
     )
 }

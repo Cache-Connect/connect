@@ -1,6 +1,7 @@
 import React, { useState }  from 'react'
 import style from '../assets/css/Form.module.css';
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer';
 // import style from '../assets/css/Form.module.css';
 const Feedback = () => {
 
@@ -84,7 +85,7 @@ const Feedback = () => {
                 {/* {showUpdate && <button  className={`${style.submitButton}`} type="button" onClick={handleUpdate}>Update</button>} */}
                 <button className={`${style.submitButton}`} type="button" onClick={handleSubmit}>Submit</button>
             </div>
-      
+            <Footer />
        </>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import style from '../assets/css/Form.module.css';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import axios from 'axios';
 
 function CompanyForm() {
@@ -213,6 +214,7 @@ function CompanyForm() {
                 {showUpdate && <button  className={`${style.submitButton}`} type="button" onClick={handleUpdate}>Update</button>}
                 <button  className={`${style.submitButton}`} type="button" onClick={handleSubmit}>Submit</button>
             </div>
+            <Footer />
         </div>
     )
 }

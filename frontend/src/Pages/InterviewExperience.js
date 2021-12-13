@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import jwt from 'jsonwebtoken';
 import { useHistory } from 'react-router';
 import '../assets/css/interviewExperience.css'
@@ -87,6 +88,7 @@ function InterviewExperience() {
                 </div>
             </div>
         </div>
+        <Footer />
         </div>
     )
 }

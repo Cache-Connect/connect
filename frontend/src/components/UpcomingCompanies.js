@@ -94,4 +94,4 @@ function UpcomingCompanies() {
     )
 }
 
-export default UpcomingCompanies
+export default UpcomingCompanies;
